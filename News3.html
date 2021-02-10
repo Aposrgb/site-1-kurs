@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_news3.css">
+    <title>Documents</title>
+</head>
+<body style="background-color:black" >
+    <div class="header" >
+        <div id ="logo"><a href="index.html">Formicidae</a></div>
+        <div id="menu_device" onclick="menuDevice()">Меню<img src="img/мену.png"></div>
+        <div id="device_menu">
+        <div id ="header_news"><a href="index.html">Новости</a></div>
+        <a id="other1" href="1.html">Статьи</a>
+        <div id ="header_other" onmouseover="menu()" onmouseout="off()">Разное
+        <ul id="menu_botom">
+            <a href="1.html"><li>Статьи</li></a>
+            <a href="other.html"><li>Подбор Муравьев</li></a>
+        </ul>
+        </div>
+        <a id="other2" href="other.html">Подбор Муравьев</a>
+        <div id ="header_contacts"><a href="obratnaua.html">Контакты</a></div>
+        <div id ="header_login"><a href="Login.html"><p>Войти</p><img id="img_door"src="door.png"></a></div>
+        </div>
+    </div>
+        <div id="basic">
+        <div class="bas_main">
+            <div class="line_data_author">
+                <p id="name_section">НАУКА</p>
+                <p id="date_news">14 НОЯБРЯ 2019, 05:53</p>
+                <p id="author_news"> Иван Иванов</p>
+            </div>
+            <div class="basic_text">
+                <hr id="underline1">
+                <div id="name_news">Муравьи-каннибалы вырвались на свободу из ядерного бункера</div>
+                <div id="img_news1"><p id="text_img1">Фото: pixabay</p><img src="https://moika78.ru/news2/2019/11/Bezymyannyj-130.jpg"><p id="text_part1"></div>
+                <p id="text_part1">В советском ядерном бункере муравьи превратились в каннибалов. Польские ученые помогли выбраться насекомым на свободу и вернуться в свое гнездо.</p>
+                <div id="text_under1"><hr id="underline2"><p id="text_part2">Как сообщает Journal of Hymenoptera Research, муравьи упали в подземный заброшенный бункер через вентиляцию. Выяснилось, что эти насекомые в условиях отсутствия пищи питались трупами сородичей.</p></div>
+                <p id="text_part3">Как ранее писала «Мойка78», ученые объяснили происхождение кастового строя у муравьев и других общественных насекомых. Деление на стерильны рабочих и королев, которые воспроизводят потомство, произошло из-за нехватки пищи и заботы о потомстве.
+
+                    К открытию причин социального «расслоения» ученых из США привело исследование генов муравьев.</p>
+            </div>
+        </div>
+        <div id="borderer">
+        <div id="border_img"><div id="img_product"><a href="https://praktikum.yandex.ru/web/?utm_source=yandex&utm_medium=cpc&utm_campaign=Yandex_RSY_Web_Obuchenie&utm_content=9022949347&utm_term=javascript%20%D0%B4%D0%BB%D1%8F%20%D1%87%D0%B0%D0%B9%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&yclid=3027991127037862270"><img src="https://tgraph.io/file/f68f670db9cea0dd0d20b.png"><p id="txt_prdct">КаК Стать JS программистом?</p><div id="link_prdct">praktikum.yandex.ru</div></a></div></div>
+        </div>
+    </div>
+    <div id="bottom_back">
+        <div class="bottom">
+        <div id="table_bottom1">
+            <section style="margin-top: 30px;" class="columns">
+                <h4 class="h4-bottom">Информация</h4>
+                <a href="obratnaua.html"><h3 class="h3-bottom">обратная связь</h3></a>  
+                <a href="rek.html"><h3 class="h3-bottom">рекламодателям</h3></a>  
+                <a href="onas.html"><h3 class="h3-bottom">о нас</h3></a>  
+                <a href="pravila.html"><h3 class="h3-bottom">правила</h3></a>  
+            </section>
+        </div>
+        
+        <div id="table_bottom2">
+            <section style="margin-top: 30px;" class="columns">
+                <h4 class="h4-bottom">Навигация</h4>
+                <a href="index.html"><h3 class="h3-bottom">новости</h3></a>  
+                <a href="1.html"><h3 class="h3-bottom">статьи</h3></a>  
+            </section>        
+        </div>
+        <div id="table_bottom3"> 
+            <section style="width: 170px;margin-top: 30px;" class="columns">
+                <h4 id="podpehis" class="h4-bottom">Подпишись</h4>
+                <table id="table-bottom">
+                    <tr>
+                        <td>
+                            <div id="rr"><a href="https://vk.com/antclub"><img src="img/vk.png" alt="" class="img-bottom"></a></div>
+                            <div id="rr"><a href="https://www.youtube.com/channel/UChlcDA-ya8ZLYsWV2YwAgRQ"><img src="img/yt.png" alt="" class="img-bottom"></a></div>
+                            <div id="rr"><a href="https://t.me/antsrus"><img src="img/tg.png" alt="" class="img-bottom"></a></div>
+                        </td>  
+                    </tr>
+                </table>
+                <h3 class="h3-bottom" id="h3-bott" style="text-align: center;color: white;">у нас уже 5 человек</h3>
+            </section>        
+        </div>
+        </div>
+    </div>
+    <script>
+		let t=0;
+        let b=document.getElementById("menu_botom");
+        function menu(){
+            if( window.innerWidth <= 1000 ){
+                return;
+            }
+            b.style="display:block;";
+        }
+        function off(){
+            b.style="display:none;";
+        }
+        function menuDevice(){
+            let md=document.getElementById("device_menu");
+            let dm=document.getElementById("menu_device");
+            if(window.innerWidth <= 700 ){
+                dm.style="margin-right: 255px;"
+            }
+            if(t==0){
+                md.style="right:0;position:relative;top: 470px;";
+                dm.style="margin-left:auto;";
+                t=1;
+            }
+            else{
+                md.style="right: -330px;";
+                dm.style="margin:0;";
+                t=0;
+            }
+        }        
+	</script>    
+</body>
+</html> 

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_other.css">
+    <title>Documents</title>
+</head>
+<body style="background-color:black" onload="load()">
+    <div class="header" >
+        <div id ="logo"><a href="index.html">Formicidae</a></div>
+        <div id="menu_device" onclick="menuDevice()">Меню<img src="img/мену.png"></div>
+        <div id="device_menu">
+        <div id ="header_news"><a href="index.html">Новости</a></div>
+        <a id="other1" href="1.html">Статьи</a>
+        <div id ="header_other" onmouseover="menu()" onmouseout="off()">Разное
+        <ul id="menu_botom">
+            <a href="1.html"><li>Статьи</li></a>
+            <a href="other.html"><li>Подбор Муравьев</li></a>
+        </ul>
+        </div>
+        <a id="other2" href="other.html">Подбор Муравьев</a>
+        <div id ="header_contacts"><a href="obratnaua.html">Контакты</a></div>
+        <div id ="header_login"><a href="Login.html"><p>Войти</p><img id="img_door"src="door.png"></a></div>
+        </div>
+    </div>
+    <div class="bas_main">
+            <div id="ant_selection"><p id="ant_text">Выберите параметры для подбора более лучшего вида муравьев</p>
+            <div id="ant_border">
+                <div id="selection1">
+                    <p id="sec1quest"><b >Какой размер предпочитаете?</b></p>
+                    <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="big">Большой размер(18 и больше)</p>
+                    <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="aver">Средний размер(4 - 16 мм)</p>
+                    <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="small">Маленький размер(1,5–3 мм)</p>
+                </div>
+                <div id="selection2">
+                    <p id="sec1quest"><b>Место содержания?</b></p>
+                    <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="eur">Европа Азия</p>
+                    <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="am">Америка</p>
+                    <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="az">В странах Азии, Северной и Южной Африки,Египет</p></div>
+                <div id="selection3">
+                    <p id="sec1quest"><b >На сколько сложно содержать?</b></p>
+                    <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="hard">Сложность содержания сложно</p>
+                    <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="aver">Сложность содержания средне</p>
+                    <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="easy">Сложность содержания простая</p>
+                </div>
+                <div id="selection4">
+                    <p id="sec1quest"><b >Чем питается?</b></p>
+                    <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="all">Всеядны</p>
+                    <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="sugar">Сахарный сироп и насекомые</p>
+                    <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="seem">Семена</p>
+                </div>
+            </div>
+            <div><input id="button" type="button" value="Готово!" onclick="doneRes()"></div>
+            <div id="ant_res">    
+                <div id="res1">
+                    <p>Результат:</p>
+                    <div id="results">
+                        <p id="name_ant1"></p><img id="img_ant1" src="#"><p id="info1"></p>
+                    </div>
+                </div>
+                <div id="res2"> 
+                    <div id="results2">
+                        <p id="prev_res"></p> <p id="name_ant2"></p><img id="img_ant2"><p id="info2"></p>
+                    </div>
+                </div>
+            </div>
+         </div>
+    
+</div>
+<div id="bottom_back">
+    <div class="bottom">
+    <div id="table_bottom1">
+        <section style="margin-top: 30px;" class="columns">
+            <h4 class="h4-bottom">Информация</h4>
+            <a href="obratnaua.html"><h3 class="h3-bottom">обратная связь</h3></a>  
+            <a href="rek.html"><h3 class="h3-bottom">рекламодателям</h3></a>  
+            <a href="onas.html"><h3 class="h3-bottom">о нас</h3></a>  
+            <a href="pravila.html"><h3 class="h3-bottom">правила</h3></a>  
+        </section>
+    </div>
+    
+    <div id="table_bottom2">
+        <section style="margin-top: 30px;" class="columns">
+            <h4 class="h4-bottom">Навигация</h4>
+            <a href="index.html"><h3 class="h3-bottom">новости</h3></a>  
+            <a href="1.html"><h3 class="h3-bottom">статьи</h3></a>  
+        </section>        
+    </div>
+    <div id="table_bottom3"> 
+        <section style="width: 170px;margin-top: 30px;" class="columns">
+            <h4 id="podpehis" class="h4-bottom">Подпишись</h4>
+            <table id="table-bottom">
+                <tr>
+                    <td>
+                        <div id="rr"><a href="https://vk.com/antclub"><img src="img/vk.png" alt="" class="img-bottom"></a></div>
+                        <div id="rr"><a href="https://www.youtube.com/channel/UChlcDA-ya8ZLYsWV2YwAgRQ"><img src="img/yt.png" alt="" class="img-bottom"></a></div>
+                        <div id="rr"><a href="https://t.me/antsrus"><img src="img/tg.png" alt="" class="img-bottom"></a></div>
+                    </td>  
+                </tr>
+            </table>
+            <h3 class="h3-bottom" id="h3-bott" style="text-align: center;color: white;">у нас уже 5 человек</h3>
+        </section>        
+    </div>
+    </div>
+</div>
+</div>
+<script>
+    let one,two,tree,four;
+    function click1(data){
+        one=data;
+    }
+    function click2(data){
+        two=data;
+    }
+    function click3(data){
+        tree=data;
+    }
+    function click4(data){
+        four=data;
+    }
+    function doneRes(){
+        let res=document.getElementById("res1");
+        let name=document.getElementById("name_ant1");
+        let img1=document.getElementById("img_ant1");
+        let info=document.getElementById("info1");
+        let name2=document.getElementById("name_ant2");
+        let img2=document.getElementById("img_ant2");
+        let info2=document.getElementById("info2");
+        if(one=="small"){
+            if(two=="az"){
+                if(tree=="easy"){
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Фараоновы муравьи";
+                        img1.src="https://dezbox.ru/wp-content/uploads/2017/04/pharaonoviy-muravei.jpg";
+                        info.innerText="Фараоновы муравьи неприхотливы, и отличаются от других собратьев по семейству самым маленьким размером: 1,5–3 мм (матка — до 4 мм). Насекомые имеют рыжий или жёлто-бурый цвет и тёмное брюшко, а матки ещё и тёмно-бурые подпалины. Самцы всегда крылаты. Семья в среднем состоит из нескольких тысяч особей, в том числе включает 100–200 самок. Иногда встречаются колонии до 300 тысяч муравьёв.Многоматочная. Живет по всему миру но родина египет.Всеядны .Просто содержать но если сбегут и поселятся в доме очень трудно вывести";
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Simopone";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Simopone_emeryi_casent0101966_profile_1.jpg/275px-Simopone_emeryi_casent0101966_profile_1.jpg";
+                        info.innerText="Встречаются в тропиках Старого света (Африка, Мадагаскар, Юго-Восточная Азия). Специализированы на питании другими видами муравьёв (мирмекофагия). Мелкие узкотелые муравьи (5—7 мм). В стебельке 1 членик (петиоль), но первый сегмент брюшка резко отделён перетяжкой от остальных, напоминая формой второй членик стебелька (постпетиоль) некоторых других муравьёв (Myrmicinae). У рабочих усики 11-члениковые и имеются оцеллии. Формула щупиков: 6,4 или 5,3 (число члеников нижнечелюстных и нижнегубных щупиков).";  
+            
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Solenopsis";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/224px-Fire_ants_01.jpg";
+                        info.innerText="Всесветное (с учётом инвазивных видов). В России 3 вида: Solenopsis deserticolum Ruzsky 1905, Solenopsis fugax (Latreille 1798), Solenopsis japonica Wheeler 1928 и Solenopsis juliae (Кабардино-Балкарская республика)";  
+                    }
+                }
+                else if(tree=="hard"){
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Муравьи - рабовладельцы";
+                        img1.src="https://animalreader.ru/wp-content/uploads/2015/05/muravii-rabovladelcy-animalreader.ru_.2.jpg";
+                        info.innerText="Муравьи-рабовладельцы мелкого размера (3-5 мм), использующие в качестве рабов виды рода Leptothorax. Они осаждают гнезда Leptothorax и убивают всех рабочих особей, пытающихся спастись бегством, откусывая у них усики и ноги своими чрезвычайно сильными, хотя и лишенными зубчиков мандибулами. Прежде чем начать осаду, H. sublaevis собирает группу особей, выводя их из гнезда по одной после «призыва», выражающегося в выделении капельки яда. Их вполне обоснованно называют «рабами», так как их труд идет на благо только их хозяевам. Рабами служат как правило виды Leptothorax acervorum и Leptothorax muscorum, реже Leptothorax tuberum.Рабочие самого вида-рабовладелца только совершают периодические набеги для захвата новых куколок рабов. Новая семья основывается молодой самкой, которая проникает в гнездо хозяина и убивает там местную матку (социальный паразитизм)Гнезда в почве.Одноматочная";
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Plagiolepis";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Plagiolepis_alluaudi_casent0003320_profile_1.jpg/275px-Plagiolepis_alluaudi_casent0003320_profile_1.jpg";
+                        info.innerText="Длина рабочих особей 1—2 мм, самок 3—4 мм. Муравейники в почве, семьи немногочисленные[2]. Более 60 видов[3], с подвидами более 90[4]. Встречаются в Старом Свете. Палеарктика, Афротропика, Мадагаскар, Ориентальная область, Новая Гвинея, Австралия, Полинезия[5]. Некоторые виды (Plagiolepis ampeloni, Plagiolepis grassei, Plagiolepis regis) стали редкими и включены в Список видов муравьёв, занесённых в Красный список угрожаемых видов МСОП";  
+            
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Pseudomyrmex";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pseudomyrmex_acanthobius_casent0173746_profile_1.jpg/274px-Pseudomyrmex_acanthobius_casent0173746_profile_1.jpg";
+                        info.innerText="Имеют относительно крупные глаза и сильное жало. Известны социальные паразиты среди членов рода, например вид Pseudomyrmex inquilinus.Живут в полостях живых деревьев и кустарников акаций (Acacia) с которыми находятся во взаимовыгодных отношениях[2]. Муравьи охраняют эти растения ради питательных телец Бельта (названы в честь натуралиста Томаса Бельта) — отростков на концах листьев тропических видов акаций.";  
+                    }
+                }
+                else{
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Monomorium";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Monomorium_pharaonis.jpg/274px-Monomorium_pharaonis.jpg";
+                        info.innerText="Мелкие муравьи (как правило менее 4 мм). Сложные фасеточные глаза имеются, но есть и слепые виды, например, Monomorium inusuale и некоторые виды Африки. Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса и постпетиолюса (последний четко отделен от брюшка), жало развито, куколки голые (без кокона)[3]. Представители видовой группы M. rothsteini complex включают муравьёв-жнецов, собирающих семена растений и членистоногих";
+                    
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Сфекомирма Фрея";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sphecomyrma_freyi_worker_no_1_holotype_%28Wilson%2C_Carpenter_and_Brown_1967%29.jpg/275px-Sphecomyrma_freyi_worker_no_1_holotype_%28Wilson%2C_Carpenter_and_Brown_1967%29.jpg";
+                        info.innerText="Этот вид впервые описан в 1967 году на основе находки первого для науки муравья из мелового периода и выделен в отдельное подсемейство Sphecomyrminae. Самки этих муравьёв, как и Armaniidae, имели сфекоидное строение усиков и мандибул, но у них был хорошо обособленный петиолюс. В 1985 и 2005 годах были описаны близкие ископаемые виды † Sphecomyrma canadensis (Канада) и † Sphecomyrma mesaki (США)";  
+            
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Pyramica";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pyramica_ludovici_casent0056480_head_1.jpg/274px-Pyramica_ludovici_casent0056480_head_1.jpg";
+                        info.innerText="Мелкие муравьи (1,2—2,6 мм) с короткими треугольными мандибулами (с многочисленными зубцами, до 8), сердцевидной головой, расширенной кзади. У сходного рода Strumigenys жвалы длинные с 2-3 апикальными зубцами. Специализированные охотники на коллембол. Гнёзда в почве, под корнями, в мёртвых ветвях. Семьи малочисленные (до 100 рабочих). Несколько видов расселились с помощью человека во многих тропических странах: Pyramica (Trichoscapa) membranifera Emery и Pyramica (Serrastruma) simoni Emery. ";  
+                    }
+                }
+            }
+            else if(two=="eur"){
+                if(tree=="easy"){
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Lasius Niger";
+                        img1.src="https://185504.selcdn.ru/static/antkingdom.reshops.ru/catalog/15/20388367259bcedb70e74f_medium.jpg";
+                        info.innerText="Самые распространённые в России — чёрные садовые муравьи. Они обитают на территории от Западной Европы до Азии, а также в Северной Америке. Величина рабочих особей и муравьёв-солдат 3–5 мм, матки же достигают сантиметра в длину. Цвет туловища от тёмно-коричневого до чёрного; оно покрыто короткими волосками. Их муравейники обычно располагаются под землёй, а наземная часть представляет собой небольшой насыпной холмик. Также чёрные садовые муравьи могут обитать в трухлявой древесине или под камнями. Семья достигает 50–70 тысяч особей и правит в ней одна матка.";
+                   
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Leptothorax acervorum";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Leptothorax_acervorum_casent0104845_profile_1.jpg/1200px-Leptothorax_acervorum_casent0104845_profile_1.jpg";
+                        info.innerText="Является одним из наиболее распространенных видов муравьев Центральной и Северной Европы. Они распространились по всей Евразии, а также в Канаде и на Аляске. Селиться, Leptothorax acervorum предпочитает в гнилых древесных остатках, в пнях и под корой. Очень редко строит гнезда под камнями или в расщелинах скал. Является факультативным полигинным видом - в гнездах обычно две и более репродуктивные королевы.";
+                   
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Tetramorium caespitum";
+                        img1.src="https://static-eu.insales.ru/files/1/4286/4550846/original/1517633329.jpg";
+                        info.innerText="Дерновый муравей, принадлежит к числу наиболее массовых. Он получил свое название за пристрастие к задерненным местообитаниям. Бока наличника с килевидными возвышениями, ограничивающими впереди усиковые ямки, заднегрудь с небольшими зубчиками, булава усиков трехчлениковая. Распространены повсеместно, кроме Крайнего Севера. Эти мелкие (до 4мм) муравьи от светло-коричневого до черного цвета, встречаются повсюду, даже в жилищах человека. Способность дерновых муравьев образовывать так называемые диффузные гнезда(использование готовых полостей и камер) делает их весьма пластичными. Проникая в жилище человека, они расселяются по возможным щелям и укрытиям, просачиваются из комнаты в комнату, их очень трудно вывести.";
+                    }
+                }
+                else if(tree=="aver"){
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Anonychomyrma";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Anonychomyrma_gilberti_casent0069883_profile_1.jpg/275px-Anonychomyrma_gilberti_casent0069883_profile_1.jpg";
+                        info.innerText="Мелкие земляные муравьи буровато-чёрного цвета, сходные с родом Iridomyrmex. Усики самок и рабочих 12-члениковые (у самцов антенны состоят из 13 сегментов). Жвалы рабочих с 7-12 зубцами. Нижнечелюстные щупики 6-члениковые, нижнегубные щупики состоят из 4 сегментов. Голени средних и задних ног с одной апикальной шпорой. Стебелёк между грудкой и брюшком состоит из одного сегмента (петиоль). Первоначально род Anonychomyrma выделяли в отдельную трибу Anonychomyrmini ";
+                   
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Apomyrma stygia";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Apomyrma_stygia_casent0103306_profile_1.jpg/275px-Apomyrma_stygia_casent0103306_profile_1.jpg";
+                        info.innerText="вид мелких муравьёв рода Apomyrma длиной около 2-3 мм. Эти муравьи были описаны в 1971 (1970) году из тропических районов Западной Африки. Это единственный вид рода.";
+                   
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Azteca";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Azteca_adrepens_casent0173822_head_1.jpg/275px-Azteca_adrepens_casent0173822_head_1.jpg";
+                        info.innerText="Небольшие древесные муравьи с одноцветной окраской (от жёлтой до бурой). Голова с выемкой на затылочном крае, у крупных рабочих голова крупная, субпрямоугольная. Длина головы некоторых самок (например, у маток Azteca longiceps) в 2—3 раза превосходит свою ширину. Мандибулы с 7-9 зубцами[4]. Кутикула тонкая, а её поверхность гладкая, без шипов и морщинок. Как правило, имеют 5-члениковые нижнечелюстные и 3-члениковые нижнегубные щупики (формула может быть 6,4, 5,3, или 4,3). Для рабочих характерен полиморфизм[5]. Род был впервые выделен швейцарским мирмекологом Огюстом Форелем на основании одного вида Azteca xanthochroa (Liometopum xanthochroum Roger, 1863).";
+                    }
+                }
+                else{
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Colobopsis ";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Camponotus_etiolatus_casent0104766_head_1.jpg/275px-Camponotus_etiolatus_casent0104766_head_1.jpg";
+                        info.innerText="Мелкие муравьи коричневого и чёрного цвета, обитатели древесины. Отличаются пробкоголовыми солдатами, или как минимум окаймлённой «обрезанной» спереди головой крупных рабочих (фрагмозис), позволяющей им затыкать вход в гнездо (сходную конвергентную форму имеют и некоторые виды кампонотусов, например Camponotus ulcerosus из подрода Myrmaphaenus, или Camponotus curviscapus из подрода Pseudocolobopsis). Ширина головы мелких рабочих HW 0,65-1,10 мм (исключения: у группы cylindrica-group и видов Фиджи, где HW 0,90-1,70 мм). Клипеус квадратный или прямоугольный. ";
+                   
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Crematogaster";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Crematogaster_hespera_casent0005669_profile_1.jpg/275px-Crematogaster_hespera_casent0005669_profile_1.jpg";
+                        info.innerText="Это мелкие (длина рабочих 2—6 мм, самки до 10) древесные муравьи, с характерными сердцевидными брюшками. Усики 11-члениковые (12 у самцов) с 2-х или 3-члениковой булавой. Характерна возможность откидывать брюшко на спину при распылении кислоты. Образуют семьи с выраженной полигинией (до 40 плодущих самок). Могут образовывать минигнезда на некотором отдалении друг от друга, входящие в состав одного большого гнезда. Муравейники располагаются в ветвях, под корой древесины, во мху.";
+                   
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Cyphomyrmex";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cyphomyrmex_cornutus_casent0052778_profile_1.jpg/275px-Cyphomyrmex_cornutus_casent0052778_profile_1.jpg";
+                        info.innerText=" род муравьёв трибы грибководов Attini из подсемейства Myrmicinae. Характерны своим тесным симбиозом с грибами. Рабочие особи мелкие, мономорфные (1,5—3 мм), усики 11 члениковые (у самцов — 13). Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса и постпетиолюса (последний чётко отделён от брюшка), жало развито, куколки голые (без кокона). Гнездо состоит из одной ячейки-камеры. В качестве субстрата для грибницы используют фекалии насекомых и кусочки фруктов";
+                    }
+                }
+            }
+            else{
+                if(tree=="hard"){
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Strumigenys";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Strumigenys_abdera_casent0005465_profile_1.jpg/275px-Strumigenys_abdera_casent0005465_profile_1.jpg";
+                        info.innerText="Мелкие муравьи (1,3—2,8 мм; Strumigenys agra до 5 мм) с сердцевидной головой, расширенной кзади, мандибулы длинные с 2—3 апикальными зубцами. У сходного рода Pyramica жвалы короткие треугольные (с многочисленными зубцами). Нижнечелюстные щупики 1-члениковые, нижнегубные щупики состоят из 1 сегмента (формула 1,1). Усики 4—6 члениковые. Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса и постпетиолюса (последний четко отделен от брюшка), жало развито, куколки голые (без кокона).";  
+            
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Secostruma lethifera";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Secostruma_lethifera_casent0102362_profile_1.jpg/274px-Secostruma_lethifera_casent0102362_profile_1.jpg";
+                        info.innerText="вид мелких муравьёв (Formicidae) из подсемейства Myrmicinae. Единственный вид рода Secostruma Bolton, 1988.Мелкие муравьи (длина около 4 мм). Коричневого цвета. Обитают в почвенном ярусе.";
+                    
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Carebara";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Carebara_vidua_casent0010803_profile_1.jpg/275px-Carebara_vidua_casent0010803_profile_1.jpg";
+                        info.innerText="род мелких тропических муравьёв (Formicidae) из подсемейства Myrmicinae. Около 200 видов (с учётом синонимизации Oligomyrmex Mayr, 1867, и других таксонов). Включает самых мелких в мире муравьёв (ширина головы 0,21 мм, общая длина менее 1 мм)Рабочие особи относятся к одним из самых мелких муравьёв (около 1 мм; 0,8—2,6 мм), в то время как их матки во много раз крупнее (около 15—20 мм). Обнаруживаются в термитниках. Усики рабочих 9 или 11-члениковые с булавой из 2 крупных члеников. Усики самок 10-члениковые (самцов 13-члениковые). ";
+                    
+                    }
+                }
+                else if(tree=="aver"){
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Martialis heureka";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Martialis_heureka_CASENT0106181_1.jpg/275px-Martialis_heureka_CASENT0106181_1.jpg";
+                        info.innerText="Имеют длину около 2—3 мм. Родовое название переводится как «находка с Марса» или «муравей с Марса» («Ant from Mars»), что связано с уникальными признаками нового вида муравьёв. Бледно-жёлтый и без глаз, то есть подземный. У него длинные хваткие челюсти, которые, по мнению исследователей, предназначены для перемалывания «мягких беспозвоночных». Задние ноги муравья длинные и тонкие, а передние — крепкие. Вероятно, этот вид выделился из общего ствола в самом начале эволюции муравьёв.";
+            
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Tatuidris tatusia";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tatuidris_tatusia_casent0178882_profile_1.jpg/274px-Tatuidris_tatusia_casent0178882_profile_1.jpg";
+                        info.innerText="Длина около 3 мм. Земляные муравьи желтовато-коричневого цвета с широкими треугольными мандибулами. Усики рабочих и самок 7-члениковые (12 у самцов). Жало развито. Обитают в почве и подстилочном слое тропических лесов. Малоподвижные скрытные муравьи";
+                    
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Feroponera ferox";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Feroponera_ferox_casent0102994_profile_1.jpg/274px-Feroponera_ferox_casent0102994_profile_1.jpg";
+                        info.innerText="Мелкие муравьи (3—4 мм) коричневого цвета. Муравьи обнаружены в разрушенном термитнике, а с учетом их вытянутых модифицированных мандибул предполагается термитофагия, характерная для ближайшего к ним рода муравьёв Centromyrmex.";
+                    
+                    }
+                }
+                else{
+                    if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Forelius";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Forelius_pruinosus_casent0103912_profile_1.jpg/274px-Forelius_pruinosus_casent0103912_profile_1.jpg";
+                        info.innerText="род муравьёв из подсемейства Dolichoderinae (триба Leptomyrmecini). Представитель аридной и семиаридной фауны Нового Света.Северная и Южная Америка: от южных частей США до северо-востока Бразилии и юга Аргентины.";
+            
+                    }
+                    else if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Harpagoxenus";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Harpagoxenus_canadensis_casent0006075_profile_1.jpg/275px-Harpagoxenus_canadensis_casent0006075_profile_1.jpg";
+                        info.innerText="Мелкие муравьи-рабовладельцы (около 3-5 мм). Используют в качестве рабов виды рода Leptothorax. Усики самок и рабочих 11-члениковые, у самцов состоят из 12 сегментов. Нижнечелюстные щупики 5-члениковые, нижнегубные щупики состоят из 3 сегментов. На заднегрудке имеются проподеальные шипики. Тело коренастое, слабо блестящее. Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса и постпетиолюса (последний чётко отделён от брюшка); оба членика с шипиками на нижней стороне. Жало развито, куколки голые (без кокона). Муравейники в земле и древесных остатках";
+                    
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Nomamyrmex ";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nomamyrmex_esenbeckii_casent0052318_head_1.jpg/274px-Nomamyrmex_esenbeckii_casent0052318_head_1.jpg";
+                        info.innerText="род средних и мелких по размеру американских кочевых муравьёв из подсемейства Ecitoninae (или Dorylinae) семейства Formicidae.Оба вида встречаются в Неарктике и Неотропике. Nomamyrmex esenbeckii широко распространён от южных штатов США до северных регионов Аргентины.";
+                    
+                    }
+                }
+            }
+        }
+        else if(one=="aver"){
+            if(two=="am"){
+                if(tree=="aver"){
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Atta cephalotes";
+                        img1.src="https://www.murashdom.com/wp-content/uploads/2017/12/myHoMn_owF4.jpg";
+                        info.innerText="Листорезы это одна из доминирующих и наиболее высокоорганизованных групп муравьев в тропической Америке, и, наряду с крупными колониями наших рыжих лесных муравьёв, могут считаться вершиной муравьиной эволюции.";
+                   
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Mycetarote";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mycetarotes_parallelus_casent0173983_profile_1.jpg/275px-Mycetarotes_parallelus_casent0173983_profile_1.jpg";
+                        info.innerText="род муравьёв-грибководов из подсемейства Myrmicinae (Attini). Характерны своим тесным симбиозом с грибами, выращиваемыми в муравейниках. Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса и постпетиолюса (последний чётко отделён от брюшка), жало развито, куколки голые (без кокона).";
+                    
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Ochetellus";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ochetellus_glaber_casent0172342_head_1.jpg/275px-Ochetellus_glaber_casent0172342_head_1.jpg";
+                        info.innerText="Мелкие земляные или древесные муравьи коричневого и чёрного цвета. Заднегрудка с двумя короткими округлыми проподеальными зубцами. Усики самок и рабочих 12-члениковые (у самцов антенны состоят из 13 сегментов). Жвалы рабочих с 7-12 зубцами. Нижнечелюстные щупики 6-члениковые, нижнегубные щупики состоят из 4 сегментов. Голени средних и задних ног с одной апикальной шпорой. Стебелёк между грудкой и брюшком состоит из одного сегмента (петиоль).";
+                    
+                    }
+                }
+                else if(tree=="hard"){
+                    if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Муравьи-легионеры";
+                        img1.src="https://nashzelenyimir.ru/wp-content/uploads/2016/02/%D0%9C%D1%83%D1%80%D0%B0%D0%B2%D1%8C%D0%B8-%D0%BA%D0%BE%D1%87%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8-%D0%BB%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B5%D1%80%D1%8B-%D1%84%D0%BE%D1%82%D0%BE-768x453.jpg";
+                        info.innerText="подсемейство кочевых муравьев, обитающих исключительно в тропиках и субтропической зоне. Особенно распространены муравьи-легионеры в Центральной и Южной Америке, встречаются на территории Африки. Обитают огромными колониями, основную часть которых составляют рабочие особи. Муравьи кочевники уничтожают на своем пути все, что годится в пищу. Несмотря на средние размеры в 2-4 мм, данный вид муравьев «берет» своей численностью, истребляя при нашествиях посевы культурных растений и питаясь их соками.";
+                   
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Manica";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Manica_rubida.jpg/274px-Manica_rubida.jpg";
+                        info.innerText="род муравьёв трибы Myrmicini из подсемейства Myrmicinae (Formicidae).муравьи рыжевато-бурого цвета (длина около 5—6 мм), похожие на крупных представителей рода Myrmica. У вида Manica rubida обнаружены матки-микрогины, функция которых остается неясной[";
+                    
+                    }
+                }
+                else{
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Anochetus ";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Anochetus_madagascarensis_casent0494333_head_1.jpg/274px-Anochetus_madagascarensis_casent0494333_head_1.jpg";
+                        info.innerText="Среднего и мелкого размера муравьи (длина около 5—10 мм) разнообразной окраски, гнездящиеся в почве, с длинными капканообразно раскрывающимися мандибулами. Известен ископаемый вид из доминиканского янтаря Anochetus exstinctus de Andrade, 1994";  
+            
+                    }
+                    else if(four=="sugar"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Eciton burchellii";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Eciton_burchellii_army_ants.jpg/275px-Eciton_burchellii_army_ants.jpg";
+                        info.innerText="Мелкие и среднего размера кочевые муравьи. Характерен полиморфизм рабочих. Мелкие рабочие имеют длину 3 мм, наиболее крупные (солдаты) — до 12 мм. Матки и самцы вдвое крупнее — около 2 см.Солдаты имеют характерные длинные серповидные жвалы. Усики рабочих и самок 12-члениковые, челюстные щупики 2-члениковые, губные — 3-члениковые. Сложные глаза у рабочих редуцированы, состоят только из одной фасетки. Стебелёк брюшка рабочих состоит из двух сегментов: петиоля и постпетиоля (у маток и самцов из одного только петиоля). Жало развито. Матки бескрылые, простые глазки отсутствуют. Самцы крылатые, их усики 13-члениковые, петиоль отличается вогнутой дорсальной поверхностью.Каждая колония состоит из одной матки (царицы), расплода (яиц, личинок и куколок) и множества взрослых рабочих.";  
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Pachycondyla";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Pachycondyla.harpax.worker.-.wheeler.svg/275px-Pachycondyla.harpax.worker.-.wheeler.svg.png";
+                        info.innerText="В широком объёме ранее включал более 200 видов, в настоящее время — около 20 видов, остальные выделены в отдельные роды. В 2009 году Крис Шмидт (Schmidt, 2009), проведя молекулярно-генетический филогенетический анализ подсемейства понерины разделил Pachycondyla на 15 родов (в основном соответствующих его ранним синонимам, добавив два новых рода — Buniapone gen. nov. и Mayaponera gen. nov.). При этом некоторые его младшие синонимы переведены в другие новые рода: Wadeura — теперь младший синоним под Cryptopone (syn. nov.), Xiphopelta — младший синоним под Pseudoponera (syn. nov.), и Termitopone вместе Syntermitopone — младшие синонимы под Neoponera (syn. nov.). ";
+                    
+                    }
+                }
+            }
+            else if(two=="az"){
+                if(tree=="easy"){
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Camponotus fallax";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Camponotus_fallax_worker.jpg";
+                        info.innerText="Этот вид характерен для дубрав, где встречается на затененных участках. На севере ареала изредка отмечается на полянах в сухих сосновых борах. На юге ареала приурочен к мезофитным стациям. Дендробионт. Сооружает гнезда в дуплах и мертвых сухих ветвях больших деревьев, так же может селиться в старых деревянных постройках.Не избегает антропогенно трансформированных территорий. Так, например, часто встречается на территории городов, в том числе на деревьях у обочин транспортных магистралей.";
+                   
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Муравьи-жнецы";
+                        img1.src="https://cdn.fishki.net/upload/post/2017/08/21/2362398/tn/fd03640569695b0ceb76182c82e4d73e.jpg";
+                        info.innerText="В основном они предпочитают жаркий засушливый климат. Размер взрослого насекомого колеблется от 4 до 16 мм (обычно не более 9 мм) и зависит от вида и специализации муравья, как и у других родов. Гнёзда жнецы строят в почве, их муравейник может достигать нескольких метров вглубь земли. На поверхности обычно виден только малопримечательный холмик. Население одной семьи обычно составляет примерно 5 тысяч особей с одной королевой и некоторым количеством неоплодотворенных самок.";
+                   
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Одонтомахус";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Odontomachus_coquereli_casent0009409_head_1.jpg/274px-Odontomachus_coquereli_casent0009409_head_1.jpg";
+                        info.innerText="Длина тела о 6 до 20 мм (в среднем около 1 см). Мандибулы прямые и узкие. Окраска от оранжевой до чёрной. Стебелёк между грудкой и брюшком состоит из 1 членика (петиоль), но первый сегмент брюшка не так резко, как у других понерин отделён перетяжкой от остальных. Заднегрудка без проподеальных зубцов (у сходного рода Anochetus они обычно развиты), Усики рабочих и самок 12-члениковые (у самцов 13). Оцеллии отсутствуют, сложные глаза среднего размера. Нижнечелюстные щупики рабочих 4-члениковые (у самцов 6 или 5), нижнегубные щупики состоят из 4 или 3 сегментов (у самцов 4 или 3). Средние и задние голени с 2 шпорами (одной гребенчатой и одной простой). Жало развито. Куколки в коконах";  
+            
+                    }
+                }
+                else if(tree=="aver"){
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Acanthomyops";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lasius_californicus_casent0005398_profile_1.jpg/275px-Lasius_californicus_casent0005398_profile_1.jpg";
+                        info.innerText="земляные муравьи жёлтого цвета. Усики самок и рабочих 12-и члениковые (у самцов антенны состоят из 13 сегментов). Жвалы рабочих с 6—10 зубцами. Нижнечелюстные щупики 3-х члениковые, нижнегубные щупики состоят из 4 сегментов. Голени средних и задних ног с одной апикальной шпорой. Стебелёк между грудкой и брюшком состоит из одного сегмента (петиоль). Мирмеколог Д. Агости при анализе формициновых муравьёв включил Acanthomyops в состав родовой группы Lasius genus group";  
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Daceton";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Daceton_armigerum_casent0178489_head_1.jpg/274px-Daceton_armigerum_casent0178489_head_1.jpg";
+                        info.innerText="Среднего размера полиморфные муравьи, длиной около 1 см (рабочие особи от 7 до 18 мм). Живут в ветвях и стволах тропических деревьев. Окраска светло-коричневая. Голова сердцевидная с длинными мандибулами. Усики 11-члениковые, нижнечелюстные щупики из 5, а нижнегубные из 3 члеников. Длина головы 1,44—4,06 мм, ширина головы 1,58—4,17 мм. На груди имеют две-три пары защитных шипов (самые длинные на переднеспинке немного изогнуты вперед). Активные хищники, совершающие одиночную фуражировку. Семьи состоят из нескольких тысяч муравьёв[2]. Мелкие муравьи с шириной головы менее 2 мм за пределами своих гнёзд не наблюдаются";  
+            
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Doleromyrma darwiniana";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Doleromyrma_darwiniana_casent0009949_profile_1.jpg/275px-Doleromyrma_darwiniana_casent0009949_profile_1.jpg";
+                        info.innerText="муравьи размером около 2—3 мм. Усики 12-члениковые. Мандибулы с 4—5 крупными и 4—5 мелкими зубчиками. Окраска тела от светлой до тёмно-коричневой.Единственный вид рода Doleromyrma Forel, 1907. Выделяют три подвида:Doleromyrma darwiniana darwiniana (Forel, 1907)Doleromyrma darwiniana fida (Forel, 1907)Doleromyrma darwiniana leae (Forel, 1913)";  
+            
+                    }
+                }
+                else{
+                    if(four=="all"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Vollenhovia";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vollenhovia_kaselela_casent0173092_head_1.jpg/274px-Vollenhovia_kaselela_casent0173092_head_1.jpg";
+                        info.innerText="муравьи рыжевато-бурого или чёрного цвета (длина 3—5 мм), внешне похожи на Myrmica и Leptothorax. Рабочие мономорфные. 11-12 члениковые (булава 3-члениковая). Формула щупиков: 2,2 или 2,1. Жвалы с 5-8 зубчиками. Формула шпор голеней ног: 0, 0. Голова субпрямоугольная, без усиковых бороздок или валиков. Глаза развиты, расположены в среднебоковой части головы. Стебелёк между грудкой и брюшком состоит из двух члеников: петиолюса (очень короткого и почти без передней стебельковой части) и постпетиолюса (последний чётко отделен от брюшка), жало развито, куколки голые (без кокона). Грудь длинная и низкая, метанотальный шов слабый. Заднегрудка без проподеальных шипиков или они мелкие. ";  
+            
+                    }
+                    else if (four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Tyrannomyrmex";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tyrannomyrmex_rex_CASENT0901021_profile.jpg/275px-Tyrannomyrmex_rex_CASENT0901021_profile.jpg";
+                        info.innerText="светло-коричневые или оранжево-жёлтые муравьи. Мандибулы с двумя зубцами на жевательном крае (апикальный и мелкий субапикальный); на базальном крае жвал зубцы отсутствуют. Внутренний вентральный край жевательной поверхности мандибул покрыт щетинками. Глаза мелкие, остаточные (состоят из нескольких фасеток). Усики 11-члениковые с 3-сегментной булавой. Нижнечелюстные и нижнегубные щупики редуцированные, состоят из двух сегментов (формула щупиков: 2,2). Лобные валики и усиковые бороздки на голове отсутствуют. Грудь почти без швов, сверху округлая. Проподеальные шипики мелкие, треугольные. ";  
+            
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Vombisidris";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Vombisidris_regina_casent0178737_profile_1.jpg/275px-Vombisidris_regina_casent0178737_profile_1.jpg";
+                        info.innerText="древесные муравьи (длина около 4—5 мм) от рыже-коричневого до чёрного цвета. Петиоль с длинным стебельком. Заднегрудка с длинными шипами";  
+            
+                    }
+                }
+            }
+            else{
+                if(tree=="aver"){
+                    if(four=="all"){
+                            res.style="display:flex;flex-direction: column;";
+                            name.innerText="Восточный лиометопум";
+                            img1.src="https://nashzelenyimir.ru/wp-content/uploads/2016/02/%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9-%D0%BB%D0%B8%D0%BE%D0%BC%D0%B5%D1%82%D0%BE%D0%BF%D1%83%D0%BC-%D0%BB%D0%B0%D1%82.-Liometopum-orientale-768x601.jpg";
+                            info.innerText="обитатель дальневосточного региона России, занесен в Красную книгу как исчезающий вид. Рабочие особи муравьев темно-коричневого цвета достигают в длину 4-6 мм. Самцы и самки абсолютно черные и имеют длину тела 10 и 12 мм, соответственно. Гнезда лиометопум обустраивает в древесине корейской сосны, пихты, монгольского дуба, липы и березы.";
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Желтый муравей-амазонка";
+                        img1.src="https://nashzelenyimir.ru/wp-content/uploads/2016/02/%D0%9C%D1%83%D1%80%D0%B0%D0%B2%D1%8C%D0%B8-%D0%B0%D0%BC%D0%B0%D0%B7%D0%BE%D0%BD%D0%BA%D0%B8-%D1%84%D0%BE%D1%82%D0%BE-768x509.jpg";
+                        info.innerText="вид муравьев, отличающийся достаточно крупными размерами: самки достигают почти сантиметровой длины, размеры самцов несколько скромнее – 6-7,5 мм, «солдаты» еще мельче и редко вырастают более 6-8 мм. Самки и «солдаты» окрашены в желто-красноватые тона, тельце обычно покрыто черными волосками. Вид обитает в странах Европы, в западных регионах Азии, на западе Сибири. Амазонки ведут рабовладельческий образ жизни, похищают других муравьев в стадии куколок, а затем используют их в качестве рабов, рабочей силы.";
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Эцитоны";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Eciton_burchellii_Illustration.png/275px-Eciton_burchellii_Illustration.png";
+                        info.innerText="Физические характеристики взрослого насекомого определяются типом питания среди личинок колонии и их наследственность. Исследования влияния генетических различий на касты у Eciton burchellii , проведённые Яффе и др. (2007), показали, что у каждой линии рабочих (патрилина, по правилу счета родства, учитывающее из поколения в поколение связи детей только с отцом) была склонность к определенной касте, что свидетельствует о значительном влиянии генетического определения каст среди каждого такого патрилина. ";
+                    
+                    }
+                }    
+                else if(tree=="easy"){
+                        if(four=="seem"){
+                            res.style="display:flex;flex-direction: column;";
+                            name.innerText="Обыкновенный тонкоголовый муравей";
+                            img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Formica_exsecta_casent0173161_profile_1.jpg/275px-Formica_exsecta_casent0173161_profile_1.jpg";
+                            info.innerText="Длина самок около 1 см, рабочие в 1,5—2 раза мельче (3,5—5,5 мм)[3]. Тело рабочих и самок двухцветное: грудка от красной до коричневой окраски, голова и брюшко буроватые. Крылатые самцы полностью буровато-чёрные. Задняя часть головы с глубокой вырезкой на затылке, а в нижней части с полуотстоящими волосками. Глаза рабочих с короткими отстоящими волосками. Наличник в профиль выпуклый. Лобная площадка матовая. Максиллярные щупики у самок, рабочих и самцов состоят из 6 члеников, а лабиальные — из 4. Места прикрепления усиков находятся у заднего края наличника. Усики 12-члениковые у самок и рабочих и 13-члениковые у самцов. Заднегрудка без шипиков или зубцов, её покатая поверхность примерно равна верхней. Средние и задние ноги с одной парой прямых шпор. Стебелёк между грудью и брюшком состоит из одного членика петиоля с вертикальной чешуйкой";
+                        }
+                        else if(four=="all"){
+                            res.style="display:flex;flex-direction: column;";
+                            name.innerText="Малый лесной муравей";
+                            img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Formica_polyctena_casent0173642_profile_1.jpg/275px-Formica_polyctena_casent0173642_profile_1.jpg";
+                            info.innerText="Муравьи длиной от 7 до 14 мм, красно-бурого цвета (грудка, стебелёк и щёки рыжевато-красные, брюшко и частично голова чёрные) сходные с рыжими лесными муравьями. Снизу головы отстоящие волоски отсутствуют или есть только прилежащие (у близкого вида Formica rufa там есть несколько пар отстоящих волосков). Сверху на каждом сегменте груди менее 3 пар отстоящих волосков (у F. rufa более 3 пар). Скутум и брюшко самок блестящие (у близкого вида F. polyctena они матовые). Усики рабочих и самок 12-члениковые с длинным первым члеником (скапус), у самцов состоят из 13 сегментов. Передний край наличника без вырезки, округлый. ";
+                    
+                        }
+                        else{
+                            res.style="display:flex;flex-direction: column;";
+                            name.innerText="Муравьи-бегунки ";
+                            img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cataglyphis_bicolor_casent0104612_profile_1.jpg/275px-Cataglyphis_bicolor_casent0104612_profile_1.jpg";
+                            info.innerText="лючевая группа муравьёв пустынь, полупустынь и степей Старого Света. Морфологически и физиологически адаптированы к жизни в аридных условиях, что позволяет им выживать даже в пустыне Сахара при температуре +50 °C[3][4][5]. Известно 2 вида социальных паразита.Основание новых семей Cataglyphis происходит как зависимым способом (почкование колоний: C. mauritanica, C. niger, C. cursor, C. floricola, C. hispanica), так и независимым способом (C. sabulosa, C. livida, C. bicolor) У видов с обычными самками (имеют развитые крылья и крыловые мышцы) происходит брачный лёт половых особей. У видов с брахиптерными самками (крылья в значительной степени редуцированы, крыловых мышц нет) спаривание происходит внутри родительского гнезда, а расселяются они по земле, иногда в сопровождении рабочих (путём почкования колонии). ";
+                    
+                        }
+                }
+                else{
+                    if(four=="all"){
+                            res.style="display:flex;flex-direction: column;";
+                            name.innerText="Пробкоголовый муравей";
+                            img1.src="https://ants.pet/wp-content/uploads/2018/09/86.jpg";
+                            info.innerText="Передняя часть головы солдат как бы резко полувертикально обрублена, что позволяет этим муравьям затыкать ею словно пробкой вход в своё древесное гнездо. Длина рабочих особей 3—6 мм. Общая окраска красновато-коричневая; брюшко и верх головы — буровато-чёрные; на брюшке желтоватое кольцо на 2 тергите. Дендробионт, гнездится в древесине, колонии моногинные с одной маткой";
+                    }
+                    else if(four=="seem"){
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Euponera";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pachycondyla_sikorae_casent0063893_profile_1.jpg/275px-Pachycondyla_sikorae_casent0063893_profile_1.jpg";
+                        info.innerText="род муравьёв из подсемейства Понерины. Распространены в Афротропиках (включая Мадагаскар) и Восточной Азии. Размер рабочих особей — 6–10,5 мм. Матки похожи на рабочих муравьёв, но крупнее и обладают перепончатыми крыльями. 26 видов.";
+        
+                    }
+                    else{
+                        res.style="display:flex;flex-direction: column;";
+                        name.innerText="Leptanilloides";
+                        img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Leptanilloides_biconstricta_casent0104676_profile_2.jpg/275px-Leptanilloides_biconstricta_casent0104676_profile_2.jpg";
+                        info.innerText="Скрытные муравьи с безглазыми рабочими особями. Ранее включались в состав подсемейства Cerapachyinae (Brown 1975; Bolton 1990a, b) или в отдельное подсемейство Leptanilloidinae, выделенное энтомологами Baroni Urbani et al (1992) и рассматриваемое в качестве сестринского к Cerapachyinae и всем другим дориломорфам. Однако в 2014 году мирмекологи Brady et al. синонимизировали все дориломорфные подсемейства в одно объединённое Dorylinae (включая Leptanilloidinae)";
+                    
+                    }
+                }
+                
+            }
+        }
+        else{
+            if(tree=="hard"){
+                if(four=="all"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Anergates atratulus";
+                    img1.src="https://image.jimcdn.com/app/cms/image/transf/dimension=600x10000:format=jpg/path/s19a8fa4f336dd084/image/i97e91c8c1840a657/version/1474976604/image.jpg";
+                    info.innerText="Интересный узкоспециализированный социальнопаразитический вид, не имеющий рабочих особей. Самцы этого вида практически бесцветны (бледно-желтые) и не имеют крыльев - больше похожи на куколок, чем на взрослых муравьев. Самка темно-бурая. Паразитирует на семьях Tetramorium caespitum. Пользуясь феромонами, матка A. atratulus свободно проникает в гнездо T. caespitum, плодятся рядом с ними, ни о чем не заботясь, а рабочих дернового муравья использует в качестве «рабов».";
+                
+                }
+                else if(four=="sugar"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Муравей-пуля";
+                    img1.src="https://i.ytimg.com/vi/Dcv1L7FV-14/hqdefault.jpg";
+                    info.innerText="Муравей имеет крупное тело, покрытое твердой оболочкой. Длина тела варьируется в пределах 18–30 мм в зависимости от статуса особи.Матку от остальных членов семьи заметно выделяет крупное брюшко. Все тело, в особенности конечности муравья, покрыто тонкими игольчатыми шипами. Немного выпуклые темные глазки расположены по бокам головы. Яйца желтовато-белые, круглой формы";  
+            
+                }
+                else{
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Camponotus gigas";
+                    img1.src="https://24smi.org/public/media/resize/800x-/2017/8/10/01_bxocx1S.jpg";
+                    info.innerText="Этот вид муравьев считается одним из самых крупных. Рабочие насекомые достигают 22 мм, тяжелые и мощные муравьи-солдаты вырастают до 28 мм, а самая большая матка муравья этого вида достигает 31-33 мм. Такие насекомые живут в странах Азии и встречаются в Таиланде, Индонезии, Малайзии. Узнать Camponotus gigas легко по характерному окрасу: тело у насекомых черное, лапы - желтые, а задняя часть туловища - красно-коричневая. ";
+                }
+            }
+            else if(tree=="aver"){
+                if(four=="all"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Dinoponera longipes Emery";
+                    img1.src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Dinoponera_lucida_casent0104920_head_1.jpg";
+                    info.innerText="Динопонера - самый крупный из известных муравьёв, по праву назван 'Муравьём-Динозавром'. Обитает в неотропиках, а некоторые подвиды вполне уживаются в саванне и сухих лесах. Семьи этой понерины весьма малочислены самое большое до 30 особей, хотя у родственного вида D. quadriceps, до 90 и 1-10 репродуктивных самок Динопонера опасный хищник, который охотится на крупных насекомых поверхности почвы, но и не кичица и мелкими позвоночными, такими как амфибии , грызуны, даже рыба и птица! Сначала муравей захватывает жертву мандибулами и пытается мирно донести до гнезда, но если жертва ведёт активную борьбу, то демобилизует уколом жала. Если жертва слишком крупная, то охотник хитро использует жвала для расчленения тела, он меняет прикус и режет плоть как ножницами.";
+                }
+                else if(four=="seem"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Желтый муравей-амазонка";
+                    img1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gigantiops_destructor_casent0106169_head_1.jpg/275px-Gigantiops_destructor_casent0106169_head_1.jpg";
+                    info.innerText="вид муравьев, отличающийся достаточно крупными размерами: самки достигают почти сантиметровой длины, размеры самцов несколько скромнее – 6-7,5 мм, «солдаты» еще мельче и редко вырастают более 6-8 мм. Самки и «солдаты» окрашены в желто-красноватые тона, тельце обычно покрыто черными волосками. Вид обитает в странах Европы, в западных регионах Азии, на западе Сибири. Амазонки ведут рабовладельческий образ жизни, похищают других муравьев в стадии куколок, а затем используют их в качестве рабов, рабочей силы.";
+         
+                }
+                else{
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Gigantiops destructor";
+                    img1.src="https://nashzelenyimir.ru/wp-content/uploads/2016/02/%D0%9C%D1%83%D1%80%D0%B0%D0%B2%D1%8C%D0%B8-%D0%B0%D0%BC%D0%B0%D0%B7%D0%BE%D0%BD%D0%BA%D0%B8-%D1%84%D0%BE%D1%82%D0%BE-768x509.jpg";
+                    info.innerText="Среднего размера муравьи (длина около 1 см), гнездящиеся в почве (иногда в междоузлиях Cecropia, упавших на землю). Отличаются очень крупными глазами, занимающими большую часть головы, а также тем что могут прыгать. Моногинные и полидомные колонии во Французской Гвиане имеют плотность в тропических лесах до 300 гнёзд на гектар. Размер семей достигает нескольких сотен муравьёв. Фуражировочная активность дневная с пиком активности между 9:30 и 11:30. Одиночные фуражировщики собирают внецветковый нектар и мелких членистоногих, которых они высматривают визуально и бросаются к жертве прыжками.";
+                    
+                }
+            }
+            else{
+                if(four=="all"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Муравьи-бульдоги";
+                    img1.src="https://24smi.org/public/media/resize/800x-/2017/8/10/04.jpg";
+                    info.innerText="муравьи-бульдоги относятся к самым древним и слабо организованным муравьям. Эти насекомые длиной до 40 мм у муравья-рабочего и 45 мм у матки на фото напоминают черных ос, только без крыльев. Своим названием они обязаны мощным челюстям, которые выступают перед головой на 5 мм. Острые зазубрины превращают челюсти в грозное оружие, которым муравьи-бульдоги эффективно пользуются, защищая гнездо. Еще насекомые плавают, способны прыгать и даже громко стрекочут.";  
+                }
+                else if(four=="sugar"){
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Camponotus vagus";
+                    img1.src="https://24smi.org/public/media/resize/800x-/2017/8/10/05.jpg";
+                    info.innerText="Такие муравьи темно-серого или черного цвета достигают в длину 14-16 мм у маток и 6-12 мм у рабочих и солдат. Ареал данного вида обширный и захватывает территории Северной Азии, Западной Сибири, Урала и даже Европы.";  
+            
+                }
+                else{
+                    res.style="display:flex;flex-direction: column;";
+                    name.innerText="Camponotus herculeanus.";
+                    img1.src="https://24smi.org/public/media/resize/800x-/2017/8/10/06.JPG";
+                    info.innerText="Красногрудые муравьи получили название из-за внешнего вида - черные голова и брюшко контрастируют с грудью красного цвета. Матки этого вида достигают 20 мм, самец в 2 раза мельче и вырастает до 9-11 мм, рабочие члены гнезда вырастают до 15 мм.";  
+            
+                }
+            }
+        }
+        name2=document.getElementById("name_ant1").innerText;
+        img2=document.getElementById("img_ant1").src;
+        info2=document.getElementById("info1").innerText;
+        localStorage.setItem("name2", name2);
+        localStorage.setItem("img2", img2);
+        localStorage.setItem("info2", info2);
+    }
+    function load(){
+        one=localStorage.getItem("one");
+        two=localStorage.getItem("two");
+        tree=localStorage.getItem("tree");
+        four=localStorage.getItem("four");
+        let names=localStorage.getItem("name2");
+        let image=localStorage.getItem("img2");
+        let inform=localStorage.getItem("info2");
+        let name2=document.getElementById("name_ant2");
+        let img2=document.getElementById("img_ant2");
+        let inform2=document.getElementById("info2");
+        let res2=document.getElementById("res2");
+        let prev_res=document.getElementById("prev_res");
+        if(image!=null){
+            localStorage.removeItem("one");
+            localStorage.removeItem("two");
+            localStorage.removeItem("tree");
+            localStorage.removeItem("four");
+            res2.style="display:flex;flex-direction: column;";
+            prev_res.innerText="[Прошлый результат!]";
+            name2.innerText=names;
+            img2.src=image;
+            inform2.innerText=inform;
+        }
+        if(one!=undefined){
+            doneRes();
+        }
+        
+    }
+    let t=0;
+        let b=document.getElementById("menu_botom");
+        function menu(){
+            if( window.innerWidth <= 1000 ){
+                return;
+            }
+            b.style="display:block;";
+        }
+        function off(){
+            b.style="display:none;";
+        }
+        function menuDevice(){
+            let md=document.getElementById("device_menu");
+            let dm=document.getElementById("menu_device");
+            if(window.innerWidth <= 700 ){
+                dm.style="margin-right: 255px;"
+            }
+            if(t==0){
+                md.style="right:0;position:relative;top: 470px;";
+                dm.style="margin-left:auto;";
+                t=1;
+            }
+            else{
+                md.style="right: -330px;";
+                dm.style="margin:0;";
+                t=0;
+            }
+        }        
+</script>
+</body>
+</html> 

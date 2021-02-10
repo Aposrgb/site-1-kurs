@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documents</title>
+</head>
+<body style="background-color:black">
+    <div class="header" >
+    <div id ="logo">Formicidae</div>
+    <div id="menu_device" onclick="menuDevice()">Меню<img src="img/мену.png"></div>
+    <div id="device_menu">
+    <div id ="header_news">Новости</div>
+    <a id="other1" href="1.html">Статьи</a>
+    <div id ="header_other" onmouseover="menu()" onmouseout="off()">Разное
+    <ul id="menu_botom">
+        <a href="1.html"><li>Статьи</li></a>
+        <a href="other.html"><li>Подбор Муравьев</li></a>
+    </ul>
+    </div>
+    <a id="other2" href="other.html">Подбор Муравьев</a>
+    <div id ="header_contacts"><a href="obratnaua.html">Контакты</a></div>
+    <div id ="header_login"><a href="Login.html"><p>Войти</p><img id="img_door"src="door.png"></a></div>
+    </div>
+</div>
+        <div id="bas_text">Сайт о муравьях и мирмекологии.Наша цель - рассказать о содержании в домашних условиях полноценной муравьиной колонии.
+    А еще вы сможете найти друзей, которые как и вы увлекаются муравьями </div>
+       <div class="img_news">
+        <div id="img1_news"><a id="img1_news1" href="News1.html">Пример обратной эволюции показало изучение муравьев<img src="https://live24.ru/uploads/posts/2020-03/1583844063_muravej.jpg"></a></div>
+        <div id="img2_news"><a id="img2_news2" href="News2.html">Муравьи создают мегапроекты не сговариваясь<img src="https://indicator.ru/thumb/2250x0/filters:quality(75):no_upscale()/imgs/2019/08/05/10/3492617/c9effc6224d09011f09e9a2c9a10f3c8f0eec7c4.jpg"></a></div>
+        <div id="img3_news"><a id="img3_news3" href="News3.html">Муравьи-каннибалы вырвались на свободу из ядерного бункера<img src="https://moika78.ru/news2/2019/11/Bezymyannyj-130.jpg"></a></div>
+        <div id="img4_news"><a id="img4_news4" href="News4.html">Муравьи оказывают “медпомощь” раненым собратьям<img src="https://s15.stc.all.kpcdn.net/share/i/12/10364554/inx960x640.jpg"></a></div>
+        <div id="img5_news"><a id="img5_news5" href="News5.html">Какой вред наносят красные муравьи и как с ними бороться<img src="https://valbrenta.ru/upload/iblock/18a/18a7bd5e8c2e288da1c6c2d2d88337d9.jpg"></a></div>
+        <div id="img6_news"><a id="img6_news6" href="News6.html">Аргентинские муравьи отравили конкурентов и привлекли сородичей одинаковыми феромонами<img src="https://nplus1.ru/images/2018/01/26/1364874a136f5329f63c0c8190670490.jpg"></a></div>
+    </div>
+        <div id="table_news"></div>
+        <div class="day_news">
+            <div id="ant_selection"><hr><p id="ant_text">Выберите параметры для подбора более лучшего вида муравьев.</p>
+                <div id="ant_border">
+                    <div id="selection1">
+                        <p id="sec1quest"><b >Какой размер предпочитаете?</b></p>
+                        <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="big">Большой размер(18 и больше)</p>
+                        <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="aver">Средний размер(4 - 16 мм)</p>
+                        <p id="sec1but"><input onchange="click1(value)" name="dzen1" type="radio" value="small">Маленький размер(1,5–3 мм)</p>
+                    </div>
+                    <div id="selection2">
+                        <p id="sec1quest"><b>Место содержания?</b></p>
+                        <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="eur">Европа Азия</p>
+                        <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="am">Америка</p>
+                        <p id="sec1but"><input onchange="click2(value)" name="dzen2" type="radio" value="az">В странах Азии, Северной и Южной Африки,Египет</p></div>
+                    <div id="selection3">
+                        <p id="sec1quest"><b >На сколько сложно содержать?</b></p>
+                        <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="hard">Сложность содержания сложно</p>
+                        <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="aver">Сложность содержания средне</p>
+                        <p id="sec1but"><input onchange="click3(value)" name="dzen3" type="radio" value="easy">Сложность содержания простая</p>
+                    </div>
+                    <div id="selection4">
+                        <p id="sec1quest"><b >Чем питается?</b></p>
+                        <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="all">Всеядны</p>
+                        <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="sugar">Сахарный сироп и насекомые</p>
+                        <p id="sec1but"><input onchange="click4(value)" name="dzen4" type="radio" value="seem">Семена</p>
+                    </div>
+                </div>
+                <div><input id="button" type="button" value="Готово!" onclick="doneRes()"></div>
+             </div>
+             <div id="description">
+                <hr>
+                <div>
+                    Кормление муравьев и другие статьи на нашем портале.
+                </div> 
+                <div>
+                    Статьи:
+                </div> 
+               <div id="articles">
+                <div id="border_desc">
+                <div>Кормление <a href="3.html">(Каждый муравей питается по своему...).</a>
+                <div><img src="https://m1.35photo.pro/photos_series/641/641191.jpg"></div>
+            </div>
+            </div>
+            <div id="border_desc">
+                <div>Про инкубатор <a href="2.html">(Есть разные виды инкубаторов...)</a>
+                <div><img src="img/prob.png"></div>
+            </div>
+            </div>
+        </div>
+        <div id="all_art">
+            <a href="1.html"><h1>Все статьи</h1></a>
+        </div>
+             </div>
+        </div>
+            <div class="bottom">
+            <div id="table_bottom1">
+                <section style="margin-top: 30px;" class="columns">
+                    <h4 class="h4-bottom">Информация</h4>
+                    <a href="obratnaua.html"><h3 class="h3-bottom">обратная связь</h3></a>  
+                    <a href="rek.html"><h3 class="h3-bottom">рекламодателям</h3></a>  
+                    <a href="onas.html"><h3 class="h3-bottom">о нас</h3></a>  
+                    <a href="pravila.html"><h3 class="h3-bottom">правила</h3></a>  
+                </section>
+            </div>
+            
+            <div id="table_bottom2">
+                <section style="margin-top: 30px;" class="columns">
+                    <h4 class="h4-bottom">Навигация</h4>
+                    <a href="index.html"><h3 class="h3-bottom">новости</h3></a>  
+                    <a href="1.html"><h3 class="h3-bottom">статьи</h3></a>  
+                </section>        
+            </div>
+            <div id="table_bottom3"> 
+                <section style="width: 170px;margin-top: 30px;" class="columns">
+                    <h4 id="podpehis" class="h4-bottom">Подпишись</h4>
+                    <table id="table-bottom">
+                        <tr>
+                            <td>
+                                <div id="rr"><a href="https://vk.com/antclub"><img src="img/vk.png" alt="" class="img-bottom"></a></div>
+                                <div id="rr"><a href="https://www.youtube.com/channel/UChlcDA-ya8ZLYsWV2YwAgRQ"><img src="img/yt.png" alt="" class="img-bottom"></a></div>
+                                <div id="rr"><a href="https://t.me/antsrus"><img src="img/tg.png" alt="" class="img-bottom"></a></div>
+                            </td>  
+                        </tr>
+                    </table>
+                    <h3 class="h3-bottom" style="text-align: center;color: white;">у нас уже 5 человек</h3>
+                </section>        
+            </div>
+            </div>
+    <script>
+        let t=0;
+        let b=document.getElementById("menu_botom");
+        function menu(){
+            if( window.innerWidth <= 1000 ){
+                return;
+            }
+            b.style="display:block;";
+        }
+        function off(){
+            b.style="display:none;";
+        }
+        function menuDevice(){
+            let md=document.getElementById("device_menu");
+            let dm=document.getElementById("menu_device");
+            if(window.innerWidth <= 700 ){
+                dm.style="margin-right: 255px;"
+            }
+            if(t==0){
+                md.style="right:0;position:relative;top: 470px;";
+                dm.style="margin-left:auto;";
+                t=1;
+            }
+            else{
+                md.style="right: -330px;";
+                dm.style="margin:0;";
+                t=0;
+            }
+        }
+        let one,two,tree,four;
+        function click1(data){
+            one=data;
+        }
+        function click2(data){
+            two=data;
+        }
+        function click3(data){
+            tree=data;
+        }
+        function click4(data){
+            four=data;
+        }
+        function doneRes(){
+            localStorage.setItem("one", one);
+            localStorage.setItem("two", two);
+            localStorage.setItem("tree", tree);
+            localStorage.setItem("four", four);
+            location.href="other.html";
+        }        
+    </script>
+</body>
+</html> 
