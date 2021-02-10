@@ -1,0 +1,21 @@
+body{
+    background-color: blueviolet;
+    margin: 0px;
+    padding: 0px;
+    min-width: 400px;
+    
+}
+.content{
+    background-color: white;
+    width: 1140px;
+    margin: auto;
+    height: 100%;
+}
+@media(max-width:1140px){
+    .content{
+        width: 100%;
+    }
+}
+h1{
+    text-align: center;
+}
